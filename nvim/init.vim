@@ -16,6 +16,7 @@ Plug 'junegunn/fzf.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'leafoftree/vim-vue-plugin'
 Plug 'scrooloose/syntastic'
+Plug 'ervandew/supertab'
 
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()
@@ -29,17 +30,46 @@ if has ('autocmd') " Remain compatible with earlier versions
 endif " has autocmd
 
 syntax enable
-filetype plugin indent on
+filetype indent on      " load filetype-specific indent files
+
+let mapleader=','       " leader is comma
 
 set encoding=UTF-8
-set number
-set cursorline
 
-let mapleader=","
-set mouse=a " Enable mouse support
+set autoindent
+set number              " show line numbers
+set tabstop=4           " number of visual spaces per TAB
+set softtabstop=4       " number of spaces in tab when editing
+set shiftwidth=2
+set expandtab           " tabs are spaces
+set smarttab
+set cursorline          " highlight current line
+set mouse=a             " enable mouse support
+set wildmenu            " visual autocomplete for command menu
+set lazyredraw          " redraw only when we need to.
+set showmatch           " highlight matching [{()}]
 
-" colorscheme abstract
-colorscheme dracula
+set incsearch           " search as characters are entered
+set hlsearch            " highlight matches
+
+" move vertically by visual line
+nnoremap j gj
+nnoremap k gk
+
+" edit vimrc/zshrc and load vimrc bindings
+nnoremap <leader>ev :e $MYVIMRC<CR>
+nnoremap <leader>ez :e ~/.zshrc<CR>
+nnoremap <leader>sv :source $MYVIMRC<CR>
+
+" enable backup
+set backup
+set backupdir=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
+set backupskip=/tmp/*,/private/tmp/*
+set directory=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
+set writebackup
+
+" colorscheme focuspoint
+colorscheme abstract
 
 " NERDTree
 let g:NERDTreeShowHidden = 1
@@ -50,8 +80,6 @@ let g:NERDTreeStatusline = ''
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
 " Global Shortcuts
-map <silent> <Leader>ev :e ~/.config/nvim/init.vim<CR>
-nnoremap <silent> <Leader>b :NERDTreeToggle<CR>
 nnoremap <silent> <C-b> :NERDTreeToggle<CR>
 nnoremap <silent> <Leader><space> :nohlsearch<CR>
 
@@ -90,5 +118,5 @@ let g:fzf_action = {
 let $FZF_DEFAULT_COMMAND = 'ag -g ""'
 
 " coc
-let g:coc_global_extensions = ['coc-emmet', 'coc-css', 'coc-html', 'coc-json', 'coc-prettier', 'coc-tsserver', 'coc-html']
+let g:coc_global_extensions = ['coc-emmet', 'coc-css', 'coc-html', 'coc-json', 'coc-prettier', 'coc-tsserver']
 
