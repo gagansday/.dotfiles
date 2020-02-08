@@ -3,19 +3,16 @@ call plug#begin('~/.local/share/nvim/plugged')
 
 " Declare the list of plugins.
 Plug 'tpope/vim-sensible'
-Plug 'junegunn/seoul256.vim'
 Plug 'scrooloose/nerdtree'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'rafi/awesome-vim-colorschemes'
-Plug 'StanAngeloff/php.vim'
-Plug 'dracula/vim'
 Plug 'ryanoasis/vim-devicons'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'leafoftree/vim-vue-plugin'
 Plug 'scrooloose/syntastic'
+Plug 'tpope/vim-fugitive'
 
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()
@@ -118,7 +115,7 @@ let g:fzf_action = {
 let $FZF_DEFAULT_COMMAND = 'ag -g ""'
 
 " coc
-let g:coc_global_extensions = ['coc-emmet', 'coc-css', 'coc-html', 'coc-json', 'coc-prettier', 'coc-tsserver', 'coc-tailwindcss']
+let g:coc_global_extensions = ['coc-emmet', 'coc-css', 'coc-html', 'coc-json', 'coc-prettier', 'coc-tsserver', 'coc-tailwindcss', 'coc-phpls', 'coc-vetur']
 
 inoremap <silent><expr> <TAB>
       \ pumvisible() ? "\<C-n>" :
