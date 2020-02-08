@@ -1,5 +1,5 @@
 " Plugins will be downloaded under the specified directory.
-call plug#begin('~/.vim/plugged')
+call plug#begin('~/.local/share/nvim/plugged')
 
 " Declare the list of plugins.
 Plug 'tpope/vim-sensible'
