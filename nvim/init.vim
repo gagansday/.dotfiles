@@ -65,6 +65,11 @@ set backupskip=/tmp/*,/private/tmp/*
 set directory=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp
 set writebackup
 
+autocmd Filetype html setlocal ts=2 sw=2 expandtab
+autocmd Filetype js setlocal ts=2 sw=2 expandtab
+autocmd Filetype css setlocal ts=2 sw=2 expandtab
+autocmd Filetype vue setlocal ts=2 sw=2 expandtab
+
 " colorscheme focuspoint
 colorscheme abstract
 
@@ -115,7 +120,22 @@ let g:fzf_action = {
 let $FZF_DEFAULT_COMMAND = 'ag -g ""'
 
 " coc
-let g:coc_global_extensions = ['coc-emmet', 'coc-css', 'coc-html', 'coc-json', 'coc-prettier', 'coc-tsserver', 'coc-tailwindcss', 'coc-phpls', 'coc-vetur']
+let g:coc_global_extensions = ['coc-emmet',
+      \'coc-pairs',
+      \'coc-css',
+      \'coc-html',
+      \'coc-json',
+      \'coc-prettier',
+      \'coc-tsserver',
+      \'coc-tailwindcss',
+      \'coc-phpls',
+      \'coc-vetur',
+      \'coc-eslint',
+      \'coc-prettier']
+
+command! -nargs=0 Prettier :CocCommand prettier.formatFile
+vmap <leader>f  <Plug>(coc-format-selected)
+nmap <leader>f  <Plug>(coc-format-selected)
 
 inoremap <silent><expr> <TAB>
       \ pumvisible() ? "\<C-n>" :
