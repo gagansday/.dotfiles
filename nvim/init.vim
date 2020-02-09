@@ -4,15 +4,19 @@ call plug#begin('~/.local/share/nvim/plugged')
 " Declare the list of plugins.
 Plug 'tpope/vim-sensible'
 Plug 'scrooloose/nerdtree'
+Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'rafi/awesome-vim-colorschemes'
 Plug 'ryanoasis/vim-devicons'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'scrooloose/syntastic'
 Plug 'tpope/vim-fugitive'
+Plug 'Yggdroot/indentLine'
+Plug 'wakatime/vim-wakatime'
+" colorschemes
+Plug 'rafi/awesome-vim-colorschemes'
 
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()
@@ -70,8 +74,12 @@ autocmd Filetype js setlocal ts=2 sw=2 expandtab
 autocmd Filetype css setlocal ts=2 sw=2 expandtab
 autocmd Filetype vue setlocal ts=2 sw=2 expandtab
 
-" colorscheme focuspoint
+let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+
 colorscheme abstract
+" colorscheme gruvbox
+let g:indentLine_char_list = ['┊']
 
 " NERDTree
 let g:NERDTreeShowHidden = 1
