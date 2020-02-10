@@ -15,6 +15,7 @@ Plug 'scrooloose/syntastic'
 Plug 'tpope/vim-fugitive'
 Plug 'Yggdroot/indentLine'
 Plug 'wakatime/vim-wakatime'
+
 " colorschemes
 Plug 'rafi/awesome-vim-colorschemes'
 
@@ -23,7 +24,7 @@ call plug#end()
 
 " automatically reload upon save
 if has ('autocmd') " Remain compatible with earlier versions
- augroup vimrc     " Source vim configuration upon save
+  augroup vimrc     " Source vim configuration upon save
     autocmd! BufWritePost $MYVIMRC source % | echom "Reloaded " . $MYVIMRC | redraw
     autocmd! BufWritePost $MYGVIMRC if has('gui_running') | so % | echom "Reloaded " . $MYGVIMRC | endif | redraw
   augroup END
@@ -60,6 +61,7 @@ nnoremap k gk
 nnoremap <leader>ev :e $MYVIMRC<CR>
 nnoremap <leader>ec :CocConfig<CR>
 nnoremap <leader>ez :e ~/.zshrc<CR>
+nnoremap <leader>et :e ~/.tmux.conf<CR>
 nnoremap <leader>sv :source $MYVIMRC<CR>
 
 " enable backup
@@ -74,9 +76,6 @@ autocmd Filetype js setlocal ts=2 sw=2 expandtab
 autocmd Filetype css setlocal ts=2 sw=2 expandtab
 autocmd Filetype vue setlocal ts=2 sw=2 expandtab
 
-let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
-let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
-
 colorscheme abstract
 " colorscheme gruvbox
 let g:indentLine_char_list = ['┊']
@@ -90,22 +89,12 @@ let g:NERDTreeStatusline = ''
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
 " Global Shortcuts
-nnoremap <silent> <C-b> :NERDTreeToggle<CR>
-nnoremap <silent> <Leader><space> :nohlsearch<CR>
+nnoremap <silent> <leader>b :NERDTreeToggle<CR>
+nnoremap <silent> <leader><space> :nohlsearch<CR>
 
 " open new split panes to right and below
 set splitright
 set splitbelow
-" turn terminal to normal mode with escape
-tnoremap <Esc> <C-\><C-n>
-" start terminal in insert mode
-au BufEnter * if &buftype == 'terminal' | :startinsert | endif
-" open terminal on ctrl+n
-function! OpenTerminal()
-  split term://bash
-  resize 10
-endfunction
-nnoremap <c-n> :call OpenTerminal()<CR>
 
 " use alt+hjkl to move between split/vsplit panels
 tnoremap <A-h> <C-\><C-n><C-w>h
@@ -119,15 +108,15 @@ nnoremap <A-l> <C-w>l
 
 nnoremap <C-p> :FZF<CR>
 let g:fzf_action = {
-  \ 'ctrl-t': 'tab split',
-  \ 'ctrl-s': 'split',
-  \ 'ctrl-v': 'vsplit'
-  \}
+      \ 'ctrl-t': 'tab split',
+      \ 'ctrl-s': 'split',
+      \ 'ctrl-v': 'vsplit'
+      \}
 
-" Ignoring .gitignore files
+" Ignoring .gitignore files FIXME
 let $FZF_DEFAULT_COMMAND = 'ag -g ""'
 
-" coc
+" Coc
 let g:coc_global_extensions = ['coc-emmet',
       \'coc-pairs',
       \'coc-css',
