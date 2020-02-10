@@ -5,6 +5,7 @@
 ```
 $ sudo pacman -S neovim 
 $ sudo pacman -S zsh
+$ sudo pacman -S tmux
 ```
 
 ### Install Vim stuff
@@ -22,6 +23,9 @@ https://github.com/ryanoasis/nerd-fonts
 https://github.com/ohmyzsh/ohmyzsh
 
 https://github.com/romkatv/powerlevel10k#oh-my-zsh
+
+### Install Tmux stuff
+https://github.com/tmux-plugins/tpm
 
 ### Clone this repo
 ```
