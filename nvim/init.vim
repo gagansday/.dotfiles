@@ -18,10 +18,14 @@ Plug 'Yggdroot/indentLine'
 Plug 'wakatime/vim-wakatime'
 Plug 'jiangmiao/auto-pairs'
 Plug 'scrooloose/nerdcommenter'
+Plug 'sheerun/vim-polyglot'
 
 " CSS
 Plug 'mattn/emmet-vim'
 Plug 'ap/vim-css-color'
+
+" Html
+Plug 'valloric/matchtagalways'
 
 " colorschemes
 Plug 'rafi/awesome-vim-colorschemes'
@@ -97,6 +101,15 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 
 " emmet
 let g:user_emmet_leader_key=','
+
+" Html
+let g:mta_filetypes = {
+      \ 'html' : 1,
+      \ 'xhtml' : 1,
+      \ 'xml' : 1,
+      \ 'jinja' : 1,
+      \ 'blade' : 1,
+      \}
 
 " Global Shortcuts
 nnoremap <silent> <leader>b :NERDTreeToggle<CR>
