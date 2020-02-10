@@ -91,6 +91,7 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isT
 " Global Shortcuts
 nnoremap <silent> <leader>b :NERDTreeToggle<CR>
 nnoremap <silent> <leader><space> :nohlsearch<CR>
+imap jj <Esc>
 
 " open new split panes to right and below
 set splitright
@@ -131,8 +132,8 @@ let g:coc_global_extensions = ['coc-emmet',
       \'coc-prettier']
 
 command! -nargs=0 Prettier :CocCommand prettier.formatFile
-vmap <leader>f  <Plug>(coc-format-selected)
-nmap <leader>f  <Plug>(coc-format-selected)
+vmap <leader>f  :Prettier<CR>
+nmap <leader>f  :Prettier<CR>
 
 inoremap <silent><expr> <TAB>
       \ pumvisible() ? "\<C-n>" :
