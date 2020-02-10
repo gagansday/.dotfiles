@@ -15,6 +15,11 @@ Plug 'scrooloose/syntastic'
 Plug 'tpope/vim-fugitive'
 Plug 'Yggdroot/indentLine'
 Plug 'wakatime/vim-wakatime'
+Plug 'jiangmiao/auto-pairs'
+
+" CSS
+Plug 'mattn/emmet-vim'
+Plug 'ap/vim-css-color'
 
 " colorschemes
 Plug 'rafi/awesome-vim-colorschemes'
@@ -88,11 +93,13 @@ let g:NERDTreeStatusline = ''
 " Automaticaly close nvim if NERDTree is only thing left open
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
+" emmet
+let g:user_emmet_leader_key=','
+
 " Global Shortcuts
 nnoremap <silent> <leader>b :NERDTreeToggle<CR>
 nnoremap <silent> <leader><space> :nohlsearch<CR>
 imap jj <Esc>
-
 " open new split panes to right and below
 set splitright
 set splitbelow
@@ -118,8 +125,7 @@ let g:fzf_action = {
 let $FZF_DEFAULT_COMMAND = 'ag -g ""'
 
 " Coc
-let g:coc_global_extensions = ['coc-emmet',
-      \'coc-pairs',
+let g:coc_global_extensions = ['coc-pairs',
       \'coc-css',
       \'coc-html',
       \'coc-json',
