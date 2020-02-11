@@ -121,7 +121,8 @@ set splitright
 set splitbelow
 
 " Fuzzy finder
-nnoremap <C-p> :FZF<CR>
+nnoremap <leader>p :FZF<CR>
+nnoremap <C-e> :History<CR>
 
 let g:fzf_action = {
       \ 'ctrl-t': 'tab split',
