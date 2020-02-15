@@ -1,8 +1,9 @@
 # Gagan's Dotfiles
 
 
-### Install Neovim & Zsh
+### Install Neovim & Vim 8 & Zsh
 ```
+$ sudo pacman -S vim 
 $ sudo pacman -S neovim 
 $ sudo pacman -S zsh
 $ sudo pacman -S tmux
