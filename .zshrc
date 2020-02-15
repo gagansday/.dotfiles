@@ -108,9 +108,8 @@ source $ZSH/oh-my-zsh.sh
 #
 export PATH="$HOME/.config/composer/vendor/bin:$PATH"
 
-export VISUAL=nvim
-alias vim=nvim
-alias vi=nvim
+export VISUAL=vim
+alias vi=vim
 alias tmux="tmux -u"
 
 # php stuff
