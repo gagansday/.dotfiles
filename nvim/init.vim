@@ -15,7 +15,6 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'scrooloose/syntastic'
 Plug 'tpope/vim-fugitive'
 Plug 'Yggdroot/indentLine'
-Plug 'wakatime/vim-wakatime'
 Plug 'jiangmiao/auto-pairs'
 Plug 'scrooloose/nerdcommenter'
 Plug 'sheerun/vim-polyglot'

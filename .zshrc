@@ -116,8 +116,6 @@ alias tmux="tmux -u"
 alias phpunit="clear && vendor/bin/phpunit" 
 alias pf="clear && vendor/bin/phpunit --filter"
 
-[ -f ~/.remotes.zsh ] && source ~/.remotes.zsh
-
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
