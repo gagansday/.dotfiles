@@ -22,7 +22,13 @@ Plug 'easymotion/vim-easymotion'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'edkolev/tmuxline.vim'
 Plug 'KabbAmine/zeavim.vim'
+Plug 'arthurxavierx/vim-caser'
+Plug 'machakann/vim-highlightedyank'
+Plug 'alvan/vim-closetag'
+Plug 'valloric/matchtagalways'
+
 call plug#end()
+
 
 " Indention Options
 set autoindent                      " New lines inherit the indentation of previous lines.
@@ -90,6 +96,7 @@ set mouse=a                         " enable mouse support
 set wildmenu                        " visual autocomplete for command menu
 syntax enable
 filetype indent on                  " load filetype-specific indent files
+let mapleader=','                   " leader is comma
 
 " Show hidden characters, tabs, trailing whitespace
 set list
@@ -115,13 +122,14 @@ autocmd Filetype javascript setlocal tabstop=2 shiftwidth=2 softtabstop=2 expand
 autocmd Filetype vue setlocal tabstop=2 shiftwidth=2 softtabstop=2 expandtab
 autocmd FileType make setlocal noexpandtab
 
-let mapleader=','       " leader is comma
 
 nnoremap <leader>ev :e $MYVIMRC<CR>
 nnoremap <leader>ec :CocConfig<CR>
 nnoremap <leader>ez :e ~/.zshrc<CR>
 nnoremap <leader>et :e ~/.tmux.conf<CR>
 nnoremap <leader>sv :source $MYVIMRC<CR>
+
+nnoremap <silent> <leader><space> :nohlsearch<CR>
 
 " colorscheme
 colorscheme onedark
@@ -137,6 +145,7 @@ let g:NERDTreeShowHidden = 1
 let g:NERDTreeMinimalUI = 1
 let g:NERDTreeIgnore = []
 let g:NERDTreeStatusline = ''
+"
 " Automaticaly close nvim if NERDTree is only thing left open
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
@@ -218,8 +227,11 @@ autocmd CursorHold * silent call CocActionAsync('highlight')
 nmap <leader>rn <Plug>(coc-rename)
 
 " Formatting selected code.
-xmap <leader>f  <Plug>(coc-format-selected)
-nmap <leader>f  <Plug>(coc-format-selected)
+command! -nargs=0 Prettier :CocCommand prettier.formatFile
+vmap <leader>f :Prettier<CR>
+nmap <leader>f :Prettier<CR>
+"xmap <leader>f  <Plug>(coc-format-selected)
+"nmap <leader>f  <Plug>(coc-format-selected)
 
 augroup mygroup
     autocmd!
@@ -288,7 +300,6 @@ let g:coc_global_extensions = ['coc-pairs',
             \'coc-css',
             \'coc-html',
             \'coc-json',
-            \'coc-prettier',
             \'coc-tsserver',
             \'coc-tailwindcss',
             \'coc-phpls',
@@ -299,7 +310,7 @@ let g:coc_global_extensions = ['coc-pairs',
 
 " Fuzzy finder
 nnoremap <leader>p :FZF<CR>
-nnoremap <leader>e :History<CR>
+nnoremap <leader>ee :History<CR>
 
 let g:fzf_action = {
             \ 'ctrl-t': 'tab split',
@@ -324,3 +335,13 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
+
+" matchtagalways
+let g:mta_filetypes = {
+            \ 'html' : 1,
+            \ 'xhtml' : 1,
+            \ 'xml' : 1,
+            \ 'jinja' : 1,
+            \ 'blade' : 1,
+            \ 'vue' : 1,
+            \}
