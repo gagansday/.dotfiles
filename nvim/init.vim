@@ -123,13 +123,14 @@ autocmd Filetype vue setlocal tabstop=2 shiftwidth=2 softtabstop=2 expandtab
 autocmd FileType make setlocal noexpandtab
 
 
-nnoremap <leader>ev :e $MYVIMRC<CR>
-nnoremap <leader>ec :CocConfig<CR>
-nnoremap <leader>ez :e ~/.zshrc<CR>
-nnoremap <leader>et :e ~/.tmux.conf<CR>
-nnoremap <leader>sv :source $MYVIMRC<CR>
+nnoremap <silent> <leader>ev :e $MYVIMRC<CR>
+nnoremap <silent> <leader>ec :CocConfig<CR>
+nnoremap <silent> <leader>ez :e ~/.zshrc<CR>
+nnoremap <silent> <leader>et :e ~/.tmux.conf<CR>
+nnoremap <silent> <leader>sv :source $MYVIMRC<CR>
 
 nnoremap <silent> <leader><space> :nohlsearch<CR>
+nnoremap <silent> <C-s> :w<CR>
 
 " colorscheme
 colorscheme onedark
@@ -304,13 +305,15 @@ let g:coc_global_extensions = ['coc-pairs',
             \'coc-tailwindcss',
             \'coc-phpls',
             \'coc-vetur',
+            \'coc-python',
             \'coc-eslint',
             \'coc-prettier']
 
 
 " Fuzzy finder
-nnoremap <leader>p :FZF<CR>
-nnoremap <leader>ee :History<CR>
+nnoremap <silent> <leader>P :FZF<CR>
+nnoremap <silent> <leader>p :GFiles<CR>
+nnoremap <silent> <leader>ee :History<CR>
 
 let g:fzf_action = {
             \ 'ctrl-t': 'tab split',
