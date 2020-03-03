@@ -23,10 +23,7 @@ https://github.com/ryanoasis/nerd-fonts
 ### Install Zsh stuff
 https://github.com/ohmyzsh/ohmyzsh
 
-https://github.com/romkatv/powerlevel10k#oh-my-zsh
-
-### Install Tmux stuff
-https://github.com/tmux-plugins/tpm
+https://github.com/romkatv/powerlevel10k#oh-my-zsh 
 
 ### Clone this repo
 ```
