@@ -116,8 +116,11 @@ alias vi=vim
 alias tmux="tmux -u"
 
 # php stuff
-alias phpunit="clear && vendor/bin/phpunit" 
+alias phpunit="clear && vendor/bin/phpunit"
 alias pf="clear && vendor/bin/phpunit --filter"
+alias focus="sudo concentration improve"
+alias break="sudo concentration break"
+alias break1Hour="sudo concentration break -m 60"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
@@ -126,7 +129,7 @@ alias pf="clear && vendor/bin/phpunit --filter"
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/home/gagan/anaconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+__conda_setup="$('/home/gagan/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
 if [ $? -eq 0 ]; then
     eval "$__conda_setup"
 else
