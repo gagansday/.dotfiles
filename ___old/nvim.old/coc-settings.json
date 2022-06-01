@@ -1,7 +1,0 @@
-{
-  "emmet.includeLanguages": {
-    "vue-html": "html",
-    "blade": "html",
-    "javascript": "javascriptreact"
-  }
-}
