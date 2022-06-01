@@ -68,3 +68,9 @@ local python = Terminal:new({ cmd = "python", hidden = true })
 function _PYTHON_TOGGLE()
 	python:toggle()
 end
+
+local tinker = Terminal:new({ cmd = "php artisan tinker", hidden = true })
+
+function _TINKER_TOGGLE()
+	tinker:toggle()
+end
