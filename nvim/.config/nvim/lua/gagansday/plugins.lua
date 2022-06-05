@@ -97,6 +97,7 @@ return packer.startup(function(use)
 
 
   -- Copilot
+  use "github/copilot.vim"
   use {
     "zbirenbaum/copilot.lua",
     event = { "VimEnter" },
@@ -106,6 +107,8 @@ return packer.startup(function(use)
       end, 100)
     end,
   }
+
+
   use {
     "zbirenbaum/copilot-cmp",
     after = { "copilot.lua", "nvim-cmp" },
