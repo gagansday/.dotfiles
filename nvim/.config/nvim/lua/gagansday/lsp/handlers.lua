@@ -78,15 +78,7 @@ local function lsp_keymaps(bufnr)
   vim.cmd([[ command! Format execute 'lua vim.lsp.buf.formatting()' ]])
 end
 
-lsp_formatting = function(bufnr)
-  -- vim.lsp.buf.format({
-  -- 	filter = function(client)
-  -- 		return client.name-- == "sumneko_lua"
-  -- 		-- apply whatever logic you want (in this example, we'll only use null-ls)
-  -- 		-- return client.name == "null-ls"
-  -- 	end,
-  -- 	bufnr = bufnr,
-  -- })
+LspFormatting = function(bufnr)
   vim.lsp.buf.format()
 end
 
@@ -100,7 +92,7 @@ M.on_attach = function(client, bufnr)
     group = augroup,
     buffer = bufnr,
     callback = function()
-      lsp_formatting(bufnr)
+      LspFormatting(bufnr)
     end,
   })
 end
