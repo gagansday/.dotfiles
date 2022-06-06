@@ -5,4 +5,4 @@ end
 
 require "gagansday.lsp.configs"
 require("gagansday.lsp.handlers").setup()
-require "gagansday.lsp.null-ls"
+-- require("gagansday.lsp.null-ls")
