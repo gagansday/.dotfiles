@@ -115,9 +115,6 @@ return packer.startup(function(use)
   -- Laravel
   use "jwalton512/vim-blade"
 
-  -- TailwindCSS
-  use "steelsojka/headwind.nvim"
-
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if PACKER_BOOTSTRAP then
