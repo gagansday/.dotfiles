@@ -107,12 +107,16 @@ return packer.startup(function(use)
       end, 100)
     end,
   }
-
-
   use {
     "zbirenbaum/copilot-cmp",
     after = { "copilot.lua", "nvim-cmp" },
   }
+
+  -- Laravel
+  use "jwalton512/vim-blade"
+
+  -- TailwindCSS
+  use "steelsojka/headwind.nvim"
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
