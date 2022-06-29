@@ -78,7 +78,7 @@ nvim_tree.setup {
   },
   git = {
     enable = true,
-    ignore = true,
+    ignore = false,
     timeout = 500,
   },
   view = {
@@ -105,19 +105,19 @@ nvim_tree.setup {
     open_file = {
       quit_on_open = true,
       window_picker = {
-            enable = false,
+        enable = false,
       },
     },
   },
 
---  unknown options as of 22.05
---
---  update_to_buf_dir = {
---    enable = true,
---    auto_open = true,
---  },
---  auto_resize = true,
---  git_hl = 1,
---  root_folder_modifier = ":t",
+  --  unknown options as of 22.05
+  --
+  --  update_to_buf_dir = {
+  --    enable = true,
+  --    auto_open = true,
+  --  },
+  --  auto_resize = true,
+  --  git_hl = 1,
+  --  root_folder_modifier = ":t",
 
 }
