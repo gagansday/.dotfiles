@@ -1,21 +1,10 @@
-require "gagansday.options"
+require('gagansday.options')
+require('gagansday.plugins')
+require("gagansday.lsp")
+require('gagansday.comment')
+require('gagansday.nvim-tree')
+require('gagansday.lualine')
+require('gagansday.telescope')
+require('gagansday.colorscheme')
 require "gagansday.keymaps"
-require "gagansday.plugins"
-require "gagansday.colorscheme"
-require "gagansday.cmp"
-require "gagansday.lsp"
-require "gagansday.telescope"
-require "gagansday.treesitter"
-require "gagansday.autopairs"
-require "gagansday.comment"
-require "gagansday.gitsigns"
-require "gagansday.nvim-tree"
--- require "gagansday.bufferline"
-require "gagansday.lualine"
-require "gagansday.toggleterm"
-require "gagansday.project"
-require "gagansday.impatient"
-require "gagansday.indentline"
-require "gagansday.alpha"
-require "gagansday.whichkey"
 require "gagansday.autocommands"
