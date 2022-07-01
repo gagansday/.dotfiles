@@ -67,6 +67,10 @@ keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
 -- keymap("t", "<C-k>", "<C-\\><C-N><C-w>k", term_opts)
 -- keymap("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts)
 
+-- Search
+keymap("n", "<leader>h", "<cmd>nohlsearch<cr>", opts)
+
+
 -- Telescope
 keymap("n", "<leader>f", "<cmd>lua require('telescope.builtin').find_files({hidden = true})<cr>", opts)
 keymap("n", "<leader>b", "<cmd>lua require('telescope.builtin').buffers()<cr>", opts)

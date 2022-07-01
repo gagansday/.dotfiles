@@ -1,4 +1,3 @@
--- Default options
 require('nightfox').setup({
   options = {
     -- Compiled file's destination location

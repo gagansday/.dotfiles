@@ -31,12 +31,14 @@ local options = {
     wrap = false, -- display lines as one long line
     scrolloff = 8, -- is one of my fav
     sidescrolloff = 8,
+    laststatus = 3
 }
 
 for key, value in pairs(options) do
     vim.opt[key] = value
 end
 
+vim.cmd [[ highlight WinSeparator guibg=None ]]
 -- vim.cmd "set whichwrap+=<,>,[,],h,l"
 -- vim.cmd [[set iskeyword+=-]]
 -- vim.cmd [[set formatoptions-=cro]] -- TODO: this doesn't seem to work
