@@ -70,9 +70,8 @@ vim.g.maplocalleader = " "
 -- Search
 keymap("n", "<leader>h", "<cmd>nohlsearch<cr>", opts)
 
-
 -- Telescope
-keymap("n", "<leader>f", "<cmd>lua require('telescope.builtin').find_files({hidden = true})<cr>", opts)
+keymap("n", "<leader>p", "<cmd>lua require('telescope.builtin').find_files({hidden = true})<cr>", opts)
 keymap("n", "<leader>b", "<cmd>lua require('telescope.builtin').buffers()<cr>", opts)
-keymap("n", "<leader>p", "<cmd>Telescope<cr>", opts)
+keymap("n", "<leader><S-p>", "<cmd>Telescope<cr>", opts)
 keymap("n", "<leader>e", "<cmd>NvimTreeToggle<cr>", opts)
