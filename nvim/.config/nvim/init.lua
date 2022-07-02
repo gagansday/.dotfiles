@@ -11,10 +11,9 @@ require("gagansday.lualine")
 require("gagansday.keymaps")
 require("gagansday.autocommands")
 
---
 -- Tasks
--- 1. LSP (native)
--- 2. Formater (null-ls)
+-- 1. LSP (native) -> done
+-- 2. Formater (null-ls) -> done
 -- 3. CMP
 -- 4. telescope
 -- 5. comment
