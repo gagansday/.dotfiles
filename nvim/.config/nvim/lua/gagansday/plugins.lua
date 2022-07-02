@@ -42,9 +42,13 @@ packer.init {
 return packer.startup(function(use)
   -- Packer can manage itself
   use "wbthomason/packer.nvim" -- Have packer manage itself
+  use "nvim-lua/plenary.nvim" -- Useful lua functions used ny lots of plugins
+
+  -- lsp
   use 'neovim/nvim-lspconfig' -- Configurations for Nvim LSP
   use "williamboman/nvim-lsp-installer" -- simple to use language server installer
-  use "nvim-lua/plenary.nvim" -- Useful lua functions used ny lots of plugins
+  use "jose-elias-alvarez/null-ls.nvim" -- inject LSP diagnostics, code actions, and more
+
   use "numToStr/Comment.nvim" -- Easily comment stuff
   use "kyazdani42/nvim-web-devicons"
   use "kyazdani42/nvim-tree.lua"
@@ -55,14 +59,18 @@ return packer.startup(function(use)
     "nvim-treesitter/nvim-treesitter",
     run = ":TSUpdate",
   }
+  use "hrsh7th/nvim-cmp"
   use "hrsh7th/cmp-nvim-lsp"
   use "hrsh7th/cmp-buffer"
   use "hrsh7th/cmp-path"
   use "hrsh7th/cmp-cmdline"
-  use "hrsh7th/nvim-cmp"
   use "onsails/lspkind.nvim"
   use "L3MON4D3/LuaSnip"
 
+  -- tjdevries
+  -- use "tjdevries/cyclist.vim"
+
+  --
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if PACKER_BOOTSTRAP then
