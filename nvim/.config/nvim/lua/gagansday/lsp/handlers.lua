@@ -35,29 +35,14 @@ local function lsp_keymaps(bufnr)
 end
 
 local lsp_formatting = function(bufnr)
-  vim.lsp.buf.for
-			P(client.server_capabilities.documentFormattingProvider)
+	local servers = { "intelephense", "null-ls" }
 	vim.lsp.buf.format({
-    async = false,
 		filter = function(client)
-			local found = false
-			-- for _, v in ipairs(fruits) do
-			-- 	if v == value then
-			-- 		found = true
-			-- 		break
-			-- 	end
-			-- end
-			--
-			-- if not found then
-			-- 	print(value .. " is not a fruit")
-			-- end
-
-			-- use default document formatting provider if avalible
-			-- if client.server_capabilities.documentFormattingProvider == true then
-			-- 	return true
-			-- end
-			-- apply whatever logic you want (in this example, we'll only use null-ls)
-        return client.name == "null-ls"
+			for _, v in ipairs(servers) do
+				if v == client.name then
+					return true and client.server_capabilities.documentFormattingProvider
+				end
+			end
 		end,
 		bufnr = bufnr,
 	})
@@ -71,11 +56,11 @@ M.on_attach = function(client, bufnr)
 	-- end
 	lsp_keymaps(bufnr)
 	lsp_highlight_document(client)
-	-- vim.api.nvim_create_autocmd("BufWritePre", {
-	-- 	callback = function()
-	-- 		lsp_formatting(bufnr)
-	-- 	end,
-	-- })
+	vim.api.nvim_create_autocmd("BufWritePre", {
+		callback = function()
+			lsp_formatting(bufnr)
+		end,
+	})
 end
 
 local capabilities = vim.lsp.protocol.make_client_capabilities()
