@@ -33,7 +33,7 @@ local function lsp_keymaps(bufnr)
 	vim.api.nvim_buf_set_keymap(bufnr, "n", "<leader>q", "<cmd>lua vim.diagnostic.setloclist()<CR>", opts)
 end
 
-local lsp_formatting = function(bufnr)
+local lsp_formatting = function()
 	local servers = { "intelephense", "null-ls" }
 	vim.lsp.buf.format({
 		filter = function(client)
@@ -43,7 +43,6 @@ local lsp_formatting = function(bufnr)
 				end
 			end
 		end,
-		bufnr = bufnr,
 	})
 end
 
@@ -56,8 +55,9 @@ M.on_attach = function(client, bufnr)
 	lsp_keymaps(bufnr)
 	lsp_highlight_document(client)
 	vim.api.nvim_create_autocmd("BufWritePre", {
+		buffer = bufnr,
 		callback = function()
-			lsp_formatting(bufnr)
+			lsp_formatting()
 		end,
 	})
 end
