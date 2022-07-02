@@ -9,7 +9,7 @@ local options = {
 	ignorecase = true, -- ignore case in search patterns
 	mouse = "a", -- allow the mouse to be used in neovim
 	pumheight = 10, -- pop up menu height
-	showmode = false, -- we don't need to see things like -- INSERT -- anymore
+	showmode = false, -- we don"t need to see things like -- INSERT -- anymore
 	-- showtabline = 0, -- always hide tabs
 	smartcase = true, -- smart case
 	smartindent = true, -- make indenting smarter again
@@ -32,6 +32,17 @@ local options = {
 	scrolloff = 8, -- is one of my fav
 	sidescrolloff = 8,
 	laststatus = 3,
+	list = true,
+	listchars = {
+		space = "⋅",
+		tab = "»·",
+		eol = "↲",
+		trail = "-",
+		extends = "☛",
+		precedes = "☚",
+		conceal = "┊",
+		nbsp = "☠",
+	},
 }
 
 for key, value in pairs(options) do
@@ -41,4 +52,3 @@ end
 vim.cmd([[ highlight WinSeparator guibg=None ]])
 vim.cmd([[set iskeyword+=-]])
 vim.cmd("set whichwrap+=<,>,[,],h,l")
--- vim.cmd [[set formatoptions-=cro]] -- TODO: this doesn't seem to work
