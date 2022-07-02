@@ -4,13 +4,12 @@ vim.cmd [[
     autocmd FileType qf,help,man,lspinfo nnoremap <silent> <buffer> q :close<CR>
     autocmd TextYankPost * silent!lua require('vim.highlight').on_yank({higroup = 'Visual', timeout = 200})
     autocmd BufWinEnter * :set formatoptions-=cro
-    autocmd FileType qf set nobuflisted
     autocmd Filetype php setlocal ts=4 sw=4 expandtab
     autocmd Filetype html setlocal ts=2 sw=2 expandtab
     autocmd Filetype css setlocal ts=2 sw=2 expandtab
     autocmd Filetype javascript setlocal ts=2 sw=2 expandtab
     autocmd Filetype vue setlocal ts=2 sw=2 expandtab
-    autocmd Filetype lua setlocal ts=2 sw=2 expandtab
+    autocmd Filetype lua setlocal ts=2 sw=2 noexpandtab
   augroup end
 
   augroup _git
@@ -30,14 +29,3 @@ vim.cmd [[
     autocmd VimResized * tabdo wincmd =
   augroup end
 ]]
-
--- augroup _alpha
---   autocmd!
---   autocmd User AlphaReady set showtabline=0 | autocmd BufUnload <buffer> set showtabline=2
--- augroup end
-
--- Autoformat
--- augroup _lsp
---   autocmd!
---   autocmd BufWritePre * lua vim.lsp.buf.formatting()
--- augroup end

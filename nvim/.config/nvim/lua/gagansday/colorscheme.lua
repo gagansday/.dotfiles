@@ -1,4 +1,14 @@
-require("nightfox").setup({
+local status_ok, nightfox = pcall(require, "nightfox")
+if not status_ok then
+	return
+end
+
+local indent_blankline_ok, indent_blankline = pcall(require, "indent_blankline")
+if not indent_blankline_ok then
+	return
+end
+
+nightfox.setup({
 	options = {
 		-- Compiled file's destination location
 		compile_path = vim.fn.stdpath("cache") .. "/nightfox",
@@ -33,6 +43,6 @@ require("nightfox").setup({
 vim.cmd("colorscheme nordfox")
 -- set background=dark
 
-require("indent_blankline").setup({
+indent_blankline.setup({
 	space_char_blankline = " ",
 })
