@@ -66,11 +66,18 @@ return packer.startup(function(use)
 	use("hrsh7th/cmp-path")
 	use("hrsh7th/cmp-cmdline")
 	use("onsails/lspkind.nvim")
+	use("saadparwaiz1/cmp_luasnip")
+
 	use("L3MON4D3/LuaSnip")
+	use("rafamadriz/friendly-snippets")
+	-- use("onecentlin/laravel5-snippets-vscode")
 
 	use("lewis6991/gitsigns.nvim")
 	use("lukas-reineke/indent-blankline.nvim")
 	use("windwp/nvim-autopairs")
+
+	-- Filetype
+	use("jwalton512/vim-blade")
 
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins

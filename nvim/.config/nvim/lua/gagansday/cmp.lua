@@ -28,7 +28,7 @@ cmp.setup({
 		["<c-space>"] = cmp.mapping({
 			i = cmp.mapping.complete(),
 			c = function(
-				_ --[[fallback]]
+			  _ --[[fallback]]
 			)
 				if cmp.visible() then
 					if not cmp.confirm({ select = true }) then
@@ -46,8 +46,9 @@ cmp.setup({
 	sources = {
 		{ name = "nvim_lua" },
 		{ name = "nvim_lsp" },
-		{ name = "path" },
 		{ name = "luasnip" },
+		{ name = "path" },
+		{ name = "cmdline" },
 		{ name = "buffer" },
 	},
 
@@ -62,7 +63,7 @@ cmp.setup({
 			with_text = true,
 			menu = {
 				buffer = "[buf]",
-				nvim_lsp = "[LSP]",
+				nvim_lsp = "[lsp]",
 				nvim_lua = "[api]",
 				path = "[path]",
 				luasnip = "[snip]",

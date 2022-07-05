@@ -6,6 +6,7 @@ require("gagansday.lsp")
 require("gagansday.telescope")
 require("gagansday.gitsigns")
 require("gagansday.cmp")
+require("gagansday.luasnip")
 require("gagansday.comment")
 require("gagansday.autopairs")
 require("gagansday.nvim-tree")
@@ -16,7 +17,7 @@ require("gagansday.autocommands")
 -- Tasks
 -- 1. LSP (native) -> done
 -- 2. Formater (null-ls) -> done
--- 3. CMP
+-- 3. CMP -> done
 -- 4. telescope
 -- 5. comment
 -- 6. keymap
