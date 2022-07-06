@@ -18,7 +18,7 @@ require("gagansday.autocommands")
 -- 1. LSP (native) -> done
 -- 2. Formater (null-ls) -> done
 -- 3. CMP -> done
--- 4. telescope
--- 5. comment
+-- 4. telescope -> done
+-- 5. comment -> done
 -- 6. keymap
 -- 7. autocommands
