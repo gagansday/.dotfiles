@@ -43,6 +43,7 @@ return packer.startup(function(use)
 	-- Packer can manage itself
 	use("wbthomason/packer.nvim") -- Have packer manage itself
 	use("nvim-lua/plenary.nvim") -- Useful lua functions used ny lots of plugins
+	use("lewis6991/impatient.nvim")
 
 	-- lsp
 	use("neovim/nvim-lspconfig") -- Configurations for Nvim LSP

@@ -1,3 +1,4 @@
+require("impatient")
 require("gagansday.globals")
 require("gagansday.options")
 require("gagansday.plugins")
