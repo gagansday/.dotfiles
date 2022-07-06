@@ -4,12 +4,13 @@ vim.cmd [[
     autocmd FileType qf,help,man,lspinfo nnoremap <silent> <buffer> q :close<CR>
     autocmd TextYankPost * silent!lua require('vim.highlight').on_yank({higroup = 'Visual', timeout = 200})
     autocmd BufWinEnter * :set formatoptions-=cro
-    autocmd Filetype php setlocal ts=4 sw=4 expandtab
-    autocmd Filetype html setlocal ts=2 sw=2 expandtab
-    autocmd Filetype css setlocal ts=2 sw=2 expandtab
-    autocmd Filetype javascript setlocal ts=2 sw=2 expandtab
-    autocmd Filetype vue setlocal ts=2 sw=2 expandtab
-    autocmd Filetype lua setlocal ts=2 sw=2 noexpandtab
+    autocmd FileType * :ColorizerAttachToBuffer
+    autocmd FileType php setlocal ts=4 sw=4 expandtab
+    autocmd FileType html setlocal ts=2 sw=2 expandtab
+    autocmd FileType css setlocal ts=2 sw=2 expandtab
+    autocmd FileType javascript setlocal ts=2 sw=2 expandtab
+    autocmd FileType vue setlocal ts=2 sw=2 expandtab
+    autocmd FileType lua setlocal ts=2 sw=2 noexpandtab
   augroup end
 
   augroup _git

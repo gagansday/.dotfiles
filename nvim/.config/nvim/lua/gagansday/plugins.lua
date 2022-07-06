@@ -77,6 +77,7 @@ return packer.startup(function(use)
   use "lukas-reineke/indent-blankline.nvim"
   use "windwp/nvim-autopairs"
   use "phaazon/hop.nvim"
+  use "norcalli/nvim-colorizer.lua"
 
   -- Filetype
   use "jwalton512/vim-blade"
