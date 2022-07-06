@@ -3,11 +3,6 @@ if not status_ok then
   return
 end
 
-local indent_blankline_ok, indent_blankline = pcall(require, "indent_blankline")
-if not indent_blankline_ok then
-  return
-end
-
 nightfox.setup {
   options = {
     -- Compiled file's destination location
@@ -15,7 +10,7 @@ nightfox.setup {
     compile_file_suffix = "_compiled", -- Compiled file suffix
     transparent = false, -- Disable setting background
     terminal_colors = true, -- Set terminal colors (vim.g.terminal_color_*) used in `:terminal`
-    dim_inactive = false, -- Non focused panes set to alternative background
+    dim_inactive = true, -- Non focused panes set to alternative background
     styles = { -- Style to be applied to different syntax groups
       comments = "NONE", -- Value is any valid attr-list value `:help attr-list`
       conditionals = "NONE",
@@ -23,7 +18,7 @@ nightfox.setup {
       functions = "NONE",
       keywords = "NONE",
       numbers = "NONE",
-      operators = "NONE",
+      operators = "bold",
       strings = "NONE",
       types = "NONE",
       variables = "NONE",
@@ -43,6 +38,14 @@ nightfox.setup {
 vim.cmd "colorscheme nightfox"
 -- set background=dark
 
-indent_blankline.setup {
-  space_char_blankline = " ",
-}
+local indent_blankline_ok, indent_blankline = pcall(require, "indent_blankline")
+if indent_blankline_ok then
+  indent_blankline.setup {
+    space_char_blankline = " ",
+  }
+end
+
+local colorizer_ok, colorizer = pcall(require, "colorizer")
+if colorizer_ok then
+  colorizer.setup {}
+end
