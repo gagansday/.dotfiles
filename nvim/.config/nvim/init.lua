@@ -1,4 +1,4 @@
-require "impatient"
+require "gagansday.impatient"
 require "gagansday.globals"
 require "gagansday.options"
 require "gagansday.plugins"

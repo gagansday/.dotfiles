@@ -48,4 +48,10 @@ end
 local colorizer_ok, colorizer = pcall(require, "colorizer")
 if colorizer_ok then
   colorizer.setup {}
+  vim.cmd [[
+		augroup colorizer_settings
+			autocmd!
+			autocmd FileType * :ColorizerAttachToBuffer
+		augroup end
+	]]
 end
