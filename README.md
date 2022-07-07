@@ -1,5 +1,6 @@
-# .dotfiles
+# Gagan's dotfiles
 
+### Status -> Always WIP :smile:
 
 ## Requirements
 
