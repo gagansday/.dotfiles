@@ -42,6 +42,7 @@ alias vim=nvim
 alias air-backend=~/scripts/air-backend.sh
 alias air-frontend=~/scripts/air-frontend.sh
 alias dotfiles=~/scripts/dotfiles.sh
+alias scripts=~/scripts/scripts.sh
 alias ping-google="ping 8.8.8.8"
 
 # Keymap
