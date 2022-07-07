@@ -42,3 +42,7 @@ alias vim=nvim
 alias air-backend=~/scripts/air-backend.sh
 alias air-frontend=~/scripts/air-frontend.sh
 alias dotfiles=~/scripts/dotfiles.sh
+
+
+# Keymap
+bind \cy accept-autosuggestion execute
