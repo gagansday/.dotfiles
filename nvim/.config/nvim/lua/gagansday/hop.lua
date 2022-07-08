@@ -39,8 +39,8 @@ vim.api.nvim_set_keymap(
   {}
 )
 
-vim.api.nvim_set_keymap("n", "hw", "<cmd>lua require'hop'.hint_words()<cr>", {})
-vim.api.nvim_set_keymap("n", "hp", "<cmd>lua require'hop'.hint_patterns()<cr>", {})
-vim.api.nvim_set_keymap("n", "hv", "<cmd>lua require'hop'.hint_vertical()<cr>", {})
-vim.api.nvim_set_keymap("n", "hl", "<cmd>lua require'hop'.hint_lines()<cr>", {})
-vim.api.nvim_set_keymap("n", "ha", "<cmd>lua require'hop'.hint_anywhere()<cr>", {})
+vim.api.nvim_set_keymap("n", "<leader>hw", "<cmd>lua require'hop'.hint_words()<cr>", {})
+vim.api.nvim_set_keymap("n", "<leader>hp", "<cmd>lua require'hop'.hint_patterns()<cr>", {})
+vim.api.nvim_set_keymap("n", "<leader>hv", "<cmd>lua require'hop'.hint_vertical()<cr>", {})
+vim.api.nvim_set_keymap("n", "<leader>hl", "<cmd>lua require'hop'.hint_lines()<cr>", {})
+vim.api.nvim_set_keymap("n", "<leader>ha", "<cmd>lua require'hop'.hint_anywhere()<cr>", {})
