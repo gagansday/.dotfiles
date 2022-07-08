@@ -33,12 +33,12 @@ local function lsp_keymaps(bufnr)
 end
 
 local lsp_formatting = function()
-  local servers = { "intelephense", "null-ls" }
+  local servers = { "intelephense", "null-ls", "svelte" }
   vim.lsp.buf.format {
     filter = function(client)
       for _, v in ipairs(servers) do
         if v == client.name then
-          return true and client.server_capabilities.documentFormattingProvider
+          return client.server_capabilities.documentFormattingProvider
         end
       end
     end,

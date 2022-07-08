@@ -9,6 +9,7 @@ vim.cmd [[
     autocmd FileType css setlocal ts=2 sw=2 expandtab
     autocmd FileType javascript setlocal ts=2 sw=2 expandtab
     autocmd FileType vue setlocal ts=2 sw=2 expandtab
+    autocmd FileType svelte setlocal ts=2 sw=2 expandtab
     autocmd FileType lua setlocal ts=2 sw=2 noexpandtab
   augroup end
 
