@@ -16,5 +16,6 @@ null_ls.setup {
     formatting.prettier,
     formatting.stylua,
     formatting.pint,
+    formatting.blade_formatter,
   },
 }
