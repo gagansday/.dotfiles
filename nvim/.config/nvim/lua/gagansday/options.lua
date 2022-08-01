@@ -50,5 +50,5 @@ for key, value in pairs(options) do
 end
 
 vim.cmd [[ highlight WinSeparator guibg=None ]]
-vim.cmd [[set iskeyword+=-]]
+-- vim.cmd [[set iskeyword+=-]]
 vim.cmd "set whichwrap+=<,>,[,],h,l"
