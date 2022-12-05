@@ -39,12 +39,6 @@ set -g fish_pager_color_completion $foreground
 set -g fish_pager_color_description $comment
 
 alias vim=nvim
-alias air-backend=~/scripts/air-backend.sh
-alias air-frontend=~/scripts/air-frontend.sh
-alias dotfiles=~/scripts/dotfiles.sh
-alias budget=~/scripts/budget.sh
-alias scripts=~/scripts/scripts.sh
-alias ping-google="ping 8.8.8.8"
 
 # Keymap
 bind \cy accept-autosuggestion execute
