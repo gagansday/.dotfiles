@@ -70,6 +70,7 @@ if not status_ok then
   return
 end
 
-M.capabilities = cmp_nvim_lsp.update_capabilities(capabilities)
+-- M.capabilities = cmp_nvim_lsp.update_capabilities(capabilities)
+M.capabilities = require("cmp_nvim_lsp").default_capabilities()
 
 return M
