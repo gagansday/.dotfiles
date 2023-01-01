@@ -8,3 +8,7 @@
 - [nvim](https://neovim.io)
 - [tmux](https://github.com/tmux/tmux)
 - [stow](https://www.gnu.org/software/stow)
+
+# Global CLI
+
+`$ npm install --global prettier prettier-plugin-tailwindcss`
