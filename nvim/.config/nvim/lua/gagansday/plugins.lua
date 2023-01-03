@@ -82,6 +82,9 @@ return packer.startup(function(use)
   -- Filetype
   use "jwalton512/vim-blade"
 
+  -- Code Time
+  use "wakatime/vim-wakatime"
+
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if PACKER_BOOTSTRAP then
