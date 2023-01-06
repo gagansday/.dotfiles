@@ -8,6 +8,7 @@
 - [nvim](https://neovim.io)
 - [tmux](https://github.com/tmux/tmux)
 - [stow](https://www.gnu.org/software/stow)
+- [rg](https://github.com/BurntSushi/ripgrep)
 
 # Global CLI
 
