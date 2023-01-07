@@ -7,6 +7,9 @@ configs.setup {
   ensure_installed = "all", -- A list of parser names, or "all"
   sync_install = true, -- install languages synchronously (only applied to `ensure_installed`)
   ignore_install = { "" }, -- List of parsers to ignore installing
+  autotag = {
+    enable = true,
+  },
   autopairs = {
     enable = true,
   },

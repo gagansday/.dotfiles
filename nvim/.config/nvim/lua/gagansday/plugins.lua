@@ -85,6 +85,9 @@ return packer.startup(function(use)
   -- Code Time
   use "wakatime/vim-wakatime"
 
+  -- html
+  use "windwp/nvim-ts-autotag"
+
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if PACKER_BOOTSTRAP then
