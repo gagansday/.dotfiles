@@ -12,7 +12,6 @@ local servers = {
   "vuels",
   "tailwindcss",
   "tsserver",
-  "svelte",
   "solc",
 }
 
