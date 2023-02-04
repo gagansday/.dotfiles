@@ -49,6 +49,7 @@ for key, value in pairs(options) do
   vim.opt[key] = value
 end
 
+vim.opt.iskeyword:append("-")
 vim.cmd [[ highlight WinSeparator guibg=None ]]
 -- vim.cmd [[set iskeyword+=-]]
 vim.cmd "set whichwrap+=<,>,[,],h,l"
