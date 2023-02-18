@@ -51,6 +51,7 @@ return packer.startup(function(use)
   use "jose-elias-alvarez/null-ls.nvim" -- inject LSP diagnostics, code actions, and more
 
   use "numToStr/Comment.nvim" -- Easily comment stuff
+  use "JoosepAlviste/nvim-ts-context-commentstring" -- jsx comment
   use "kyazdani42/nvim-web-devicons"
   use "kyazdani42/nvim-tree.lua"
   use "EdenEast/nightfox.nvim" -- colorscheme
