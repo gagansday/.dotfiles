@@ -73,6 +73,7 @@ return packer.startup(function(use)
   use "L3MON4D3/LuaSnip"
   use "rafamadriz/friendly-snippets"
   -- use("onecentlin/laravel5-snippets-vscode")
+  use "avneesh0612/react-nextjs-snippets"
 
   use "lewis6991/gitsigns.nvim"
   use "lukas-reineke/indent-blankline.nvim"
