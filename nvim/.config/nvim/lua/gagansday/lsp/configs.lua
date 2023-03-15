@@ -13,7 +13,7 @@ if not lspconfig_status_ok then
   return
 end
 
-local servers = {
+servers = {
   "jsonls",
   "lua_ls",
   "intelephense",
@@ -24,8 +24,7 @@ local servers = {
   "solc",
 }
 
-mason.setup {}
-
+mason.setup()
 mason_lspconfig.setup {
   ensure_installed = servers,
   automatic_installation = true,

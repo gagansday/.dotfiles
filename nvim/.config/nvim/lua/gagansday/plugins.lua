@@ -51,6 +51,7 @@ return packer.startup(function(use)
   use "neovim/nvim-lspconfig" -- Configurations for Nvim LSP
   -- use "williamboman/nvim-lsp-installer" -- simple to use language server installer
   use "jose-elias-alvarez/null-ls.nvim" -- inject LSP diagnostics, code actions, and more
+  use "jay-babu/mason-null-ls.nvim"
 
   use "numToStr/Comment.nvim" -- Easily comment stuff
   use "JoosepAlviste/nvim-ts-context-commentstring" -- jsx comment
