@@ -46,8 +46,10 @@ return packer.startup(function(use)
   use "lewis6991/impatient.nvim"
 
   -- lsp
+  use "williamboman/mason.nvim" -- Easily install and manage LSP servers, DAP servers, linters, and formatters
+  use "williamboman/mason-lspconfig.nvim"
   use "neovim/nvim-lspconfig" -- Configurations for Nvim LSP
-  use "williamboman/nvim-lsp-installer" -- simple to use language server installer
+  -- use "williamboman/nvim-lsp-installer" -- simple to use language server installer
   use "jose-elias-alvarez/null-ls.nvim" -- inject LSP diagnostics, code actions, and more
 
   use "numToStr/Comment.nvim" -- Easily comment stuff
