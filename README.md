@@ -12,4 +12,4 @@
 
 # Global CLI
 
-`$ npm install --global prettier prettier-plugin-tailwindcss`
+`$ npm install --global prettier prettier-plugin-tailwindcss prettier-plugin-solidity`
