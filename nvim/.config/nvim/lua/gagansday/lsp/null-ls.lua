@@ -34,6 +34,9 @@ null_ls.setup {
     formatting.blade_formatter,
     formatting.codespell,
     formatting.pint,
+    formatting.prettier.with {
+      filetypes = { "solidity" },
+    },
     formatting.prettierd,
     formatting.stylua,
     diagnostics.solhint,
