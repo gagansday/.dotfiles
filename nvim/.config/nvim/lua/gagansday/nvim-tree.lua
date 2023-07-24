@@ -22,9 +22,9 @@ vim.api.nvim_create_autocmd("BufEnter", {
 })
 
 nvim_tree.setup {
+  on_attach = on_attach,
   disable_netrw = true,
   hijack_netrw = true,
-  open_on_setup = false,
   open_on_tab = false,
   hijack_cursor = false,
   update_cwd = true,
@@ -56,14 +56,14 @@ nvim_tree.setup {
     -- height = 30,
     hide_root_folder = false,
     side = "left",
-    mappings = {
-      custom_only = false,
-      list = {
-        { key = { "l", "<CR>", "o" }, cb = tree_cb "edit" },
-        { key = "h", cb = tree_cb "close_node" },
-        { key = "v", cb = tree_cb "vsplit" },
-      },
-    },
+    -- mappings = {
+    --   custom_only = false,
+    --   list = {
+    --     { key = { "l", "<CR>", "o" }, cb = tree_cb "edit" },
+    --     { key = "h", cb = tree_cb "close_node" },
+    --     { key = "v", cb = tree_cb "vsplit" },
+    --   },
+    -- },
     number = false,
     relativenumber = false,
   },
