@@ -21,6 +21,7 @@ servers = {
   "vuels",
   "tailwindcss",
   "tsserver",
+  "theme_check",
   "solc",
 }
 
