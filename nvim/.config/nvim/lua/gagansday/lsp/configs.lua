@@ -22,6 +22,7 @@ servers = {
   "tailwindcss",
   "tsserver",
   "theme_check",
+  "astro",
   "solc",
 }
 
