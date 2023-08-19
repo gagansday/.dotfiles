@@ -34,10 +34,13 @@ null_ls.setup {
     formatting.blade_formatter,
     formatting.codespell,
     formatting.pint,
-    formatting.prettier.with {
-      filetypes = { "solidity" },
+    -- formatting.prettier.with {
+    --   filetypes = { "solidity", "astro" },
+    -- },
+    -- formatting.prettierd,
+    formatting.prettierd.with {
+      filetypes = { "solidity", "astro" },
     },
-    formatting.prettierd,
     formatting.stylua,
     diagnostics.solhint,
   },
