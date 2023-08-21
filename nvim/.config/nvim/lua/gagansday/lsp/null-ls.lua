@@ -38,7 +38,7 @@ null_ls.setup {
     --   filetypes = { "solidity", "astro" },
     -- },
     -- formatting.prettierd,
-    formatting.prettierd.with {
+    formatting.prettier.with {
       filetypes = { "solidity", "astro" },
     },
     formatting.stylua,
