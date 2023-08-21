@@ -13,7 +13,7 @@ if not lspconfig_status_ok then
   return
 end
 
-servers = {
+local servers = {
   "jsonls",
   "lua_ls",
   "intelephense",

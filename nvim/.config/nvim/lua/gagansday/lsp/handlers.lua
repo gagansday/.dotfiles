@@ -35,6 +35,7 @@ end
 local lsp_formatting = function()
   local servers = { "null-ls" }
   vim.lsp.buf.format {
+    timeout_ms = 5000,
     filter = function(client)
       for _, v in ipairs(servers) do
         return v == client.name
