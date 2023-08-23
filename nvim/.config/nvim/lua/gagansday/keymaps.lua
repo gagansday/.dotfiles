@@ -68,6 +68,7 @@ keymap("n", "<leader>c", "<cmd>:bd<cr>", opts)
 keymap("n", "<leader>p", "<cmd>lua require('telescope.builtin').find_files({hidden = true})<cr>", opts)
 keymap("n", "<leader>b", "<cmd>lua require('telescope.builtin').buffers()<cr>", opts)
 keymap("n", "<leader><S-p>", "<cmd>Telescope<cr>", opts)
+keymap("n", "<leader>lg", "<cmd>lua require('telescope.builtin').live_grep()<cr>", opts)
 keymap("n", "<leader>e", "<cmd>NvimTreeToggle<cr>", opts)
 
 -- Hop
