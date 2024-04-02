@@ -44,3 +44,7 @@ alias vim=nvim
 bind \cy accept-autosuggestion execute
 set -x PATH "$HOME/.rbenv/bin" $PATH
 status --is-interactive; and . (rbenv init -|psub)
+
+set -gx GOPATH $HOME/go
+set -gx PATH $PATH /usr/local/go/bin/go $GOPATH/bin /opt/nvim-linux64/bin $HOME/.config/composer/vendor/bin/
+
