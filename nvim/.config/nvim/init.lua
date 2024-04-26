@@ -180,9 +180,15 @@ vim.keymap.set('t', '<Esc><Esc>', '<C-\\><C-n>', { desc = 'Exit terminal mode' }
 
 -- Buffers
 vim.keymap.set('n', '<leader>bc', '<cmd>:bd<cr>', { desc = 'Close current buffer' })
+
 -- Navigate buffers
 vim.keymap.set('n', '<S-l>', ':bnext<CR>', { desc = 'Next buffer' })
 vim.keymap.set('n', '<S-h>', ':bprevious<CR>', { desc = 'Previous buffer' })
+
+-- Tab Navigate
+vim.keymap.set('n', 'te', ':tabedit<CR>', { desc = 'New Tab' })
+vim.keymap.set('n', '<tab>', ':tabnext<CR>', { desc = 'Next tab' })
+vim.keymap.set('n', '<s-tab>', ':tabprev<CR>', { desc = 'Previous tab' })
 
 -- TIP: Disable arrow keys in normal mode
 vim.keymap.set('n', '<left>', '<cmd>echo "Use h to move!!"<CR>')
@@ -620,6 +626,7 @@ require('lazy').setup({
       -- for you, so that they are available from within Neovim.
       local ensure_installed = vim.tbl_keys(servers or {})
       vim.list_extend(ensure_installed, {
+        'cssmodules-language-server',
         'stylua', -- Used to format Lua code
         'prettierd',
         'pint',
@@ -671,6 +678,7 @@ require('lazy').setup({
         lua = { 'stylua' },
         php = { 'pint' },
         blade = { 'blade-formatter' },
+        css = { 'prettierd' },
         javascript = { 'prettierd' },
         javascriptreact = { 'prettierd' },
         -- Conform can also run multiple formatters sequentially
