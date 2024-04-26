@@ -155,6 +155,7 @@ require('lazy').setup({
   'tpope/vim-sleuth', -- Detect tabstop and shiftwidth automatically
   'jwalton512/vim-blade', -- syntax highlighting for blade templates
   'wakatime/vim-wakatime',
+  'f-person/git-blame.nvim',
 
   -- NOTE: Plugins can also be added by using a table,
   -- with the first argument being the link and the following
@@ -523,7 +524,22 @@ require('lazy').setup({
         tsserver = {},
         astro = {},
         tailwindcss = {},
-        emmet_language_server = {},
+        emmet_language_server = {
+          filetypes = {
+            'html',
+            'javascript',
+            'typescript',
+            'javascriptreact',
+            'typescriptreact',
+            'svelte',
+            'vue',
+            'tsx',
+            'jsx',
+            'blade',
+            'markdown',
+            'astro',
+          },
+        },
       }
 
       -- Ensure the servers and tools above are installed
@@ -772,7 +788,7 @@ require('lazy').setup({
     'nvim-treesitter/nvim-treesitter',
     build = ':TSUpdate',
     dependencies = {
-      'windwp/nvim-ts-autotag',
+      { 'windwp/nvim-ts-autotag' },
     },
     opts = {
       ensure_installed = { 'bash', 'c', 'html', 'lua', 'luadoc', 'markdown', 'vim', 'vimdoc' },
@@ -788,6 +804,23 @@ require('lazy').setup({
       indent = { enable = true, disable = { 'ruby' } },
       autotag = {
         enable = true,
+        enable_rename = true,
+        enable_close = true,
+        enable_close_on_slash = true,
+        filetypes = {
+          'html',
+          'javascript',
+          'typescript',
+          'javascriptreact',
+          'typescriptreact',
+          'svelte',
+          'vue',
+          'tsx',
+          'jsx',
+          'blade',
+          'markdown',
+          'astro',
+        },
       },
     },
     config = function(_, opts)
