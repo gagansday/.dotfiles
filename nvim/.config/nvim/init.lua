@@ -607,6 +607,7 @@ require('lazy').setup({
         php = { 'pint' },
         blade = { 'blade-formatter' },
         css = { 'prettierd' },
+        html = { 'prettierd' },
         javascript = { 'prettierd' },
         javascriptreact = { 'prettierd' },
         -- Conform can also run multiple formatters sequentially
